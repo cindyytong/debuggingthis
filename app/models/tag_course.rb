@@ -1,0 +1,2 @@
+class TagCourse < ApplicationRecord 
+end 

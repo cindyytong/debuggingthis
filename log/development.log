@@ -202,3 +202,67 @@ Migrating to CreateCompletedLesson (20191229162042)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateCompletedLessons (20191229184509)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (44.2ms)[0m  [1m[35mALTER TABLE "completed_lessons" RENAME TO "user_lessons"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mALTER INDEX "completed_lessons_pkey" RENAME TO "user_lessons_pkey"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "public"."completed_lessons_id_seq" RENAME TO "user_lessons_id_seq"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_completed_lessons_on_lesson_id" RENAME TO "index_user_lessons_on_lesson_id"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_completed_lessons_on_user_id" RENAME TO "index_user_lessons_on_user_id"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_completed_lessons_on_user_id_and_lesson_id" RENAME TO "index_user_lessons_on_user_id_and_lesson_id"[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "user_lessons" ADD "completed" boolean DEFAULT FALSE[0m
+  ↳ db/migrate/20191229184509_update_completed_lessons.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191229184509"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUserCourses (20191229185150)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "user_courses" ("id" bigserial primary key, "user_id" integer NOT NULL, "course_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191229185150_create_user_courses.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_courses_on_user_id" ON "user_courses"  ("user_id")[0m
+  ↳ db/migrate/20191229185150_create_user_courses.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_user_courses_on_course_id" ON "user_courses"  ("course_id")[0m
+  ↳ db/migrate/20191229185150_create_user_courses.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_user_courses_on_user_id_and_course_id" ON "user_courses"  ("user_id", "course_id")[0m
+  ↳ db/migrate/20191229185150_create_user_courses.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191229185150"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

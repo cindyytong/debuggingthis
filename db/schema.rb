@@ -10,10 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_28_222051) do
+ActiveRecord::Schema.define(version: 2019_12_29_162042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "completed_lessons", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "lesson_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_completed_lessons_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_completed_lessons_on_user_id_and_lesson_id"
+    t.index ["user_id"], name: "index_completed_lessons_on_user_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "img_url"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_courses_on_title", unique: true
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "course_id", null: false
+    t.integer "duration"
+    t.text "lesson_content"
+    t.string "video_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_lessons_on_course_id"
+    t.index ["title"], name: "index_lessons_on_title", unique: true
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "img_url"
+    t.string "linkedin_url"
+    t.string "github_url"
+    t.string "resume_url"
+    t.string "cover_letter_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id", unique: true
+  end
+
+  create_table "tag_courses", force: :cascade do |t|
+    t.integer "course_id", null: false
+    t.integer "tag_id", null: false
+    t.index ["course_id", "tag_id"], name: "index_tag_courses_on_course_id_and_tag_id", unique: true
+    t.index ["course_id"], name: "index_tag_courses_on_course_id"
+    t.index ["tag_id"], name: "index_tag_courses_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "topic", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic"], name: "index_tags_on_topic", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

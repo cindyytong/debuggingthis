@@ -336,3 +336,181 @@ Migrating to ChangeDefaultUserCourses (20191230021940)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[36mUserCourse Load (42.4ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUserLesson Load (52.9ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mLesson Load (42.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (41.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTagCourse Load (44.0ms)[0m  [1m[34mSELECT  "tag_courses".* FROM "tag_courses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTag Load (42.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProfile Load (40.8ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses"[0m
+  [1m[36mUserLesson Load (0.4ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons"[0m
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses"[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ctong@appacademy.io"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ctong@appacademy.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ctong@appacademy.io"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$U9HCo8EoKAs/d/GrC.eSu.HS7Ig2Inj9CKpljOrazXo.MV1gZsZXy"], ["session_token", "hP1tBLjay4hQxa1Iq2C0cw"], ["created_at", "2019-12-31 03:30:44.861448"], ["updated_at", "2019-12-31 03:30:44.861448"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alex@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "alex@debuggingthis.com"], ["first_name", "Alex"], ["last_name", "Tong"], ["password_digest", "$2a$12$Alud87O.Zt7xvlfDGF8OXeGm4VxSTZTLemAqxDlylSLvWBuS94CWW"], ["session_token", "9vp1pOS8_UX-8bQT4pUFLQ"], ["created_at", "2019-12-31 03:52:55.877496"], ["updated_at", "2019-12-31 03:52:55.877496"]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (43.7ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 2], ["created_at", "2019-12-31 03:53:57.218548"], ["updated_at", "2019-12-31 03:53:57.218548"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cathy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cathy@debuggingthis.com"], ["first_name", "Cathy"], ["last_name", "Tong"], ["password_digest", "$2a$12$/AR2zhS/TcPNIXJYxgIyZeqoMeIX7G/BxFmZD9SIYr63rSDbYVkNS"], ["session_token", "tnymdX5XgqKQdM7gsEwHeQ"], ["created_at", "2019-12-31 03:54:46.417392"], ["updated_at", "2019-12-31 03:54:46.417392"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (41.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mike@debuggingthis.com"], ["first_name", "Mike"], ["last_name", "Tong"], ["password_digest", "$2a$12$B/zTPfKLtCSgL6TGMJ6wB.ykWQsPwwHLPyKkvmVLtWmjHU1vvsvVa"], ["session_token", "ePGgz7lxGsmquLVMITg8DQ"], ["created_at", "2019-12-31 03:56:58.616015"], ["updated_at", "2019-12-31 03:56:58.616015"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (0.4ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 4], ["created_at", "2019-12-31 03:57:16.389720"], ["updated_at", "2019-12-31 03:57:16.389720"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brendan@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "brendan@debuggingthis.com"], ["first_name", "Brendan"], ["last_name", "Lukas"], ["password_digest", "$2a$12$mIEB1G/UnfmNVrU9KF668upNnQf3BGU2dPKm.whwcfuIxD6Q7J/lO"], ["session_token", "fvJJqpGMrqEmZ17MZuoyaQ"], ["created_at", "2019-12-31 03:58:50.685758"], ["updated_at", "2019-12-31 03:58:50.685758"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grace@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "grace@debuggingthis.com"], ["first_name", "Grace"], ["last_name", "Beaver"], ["password_digest", "$2a$12$mUB4XnDwxEIJLJjAObbItuuS0Kjadx2yi65OI7xdj.wqCHh7JK6L."], ["session_token", "osrOS6PD9LyBNbr0bHb_Wg"], ["created_at", "2019-12-31 03:59:52.084986"], ["updated_at", "2019-12-31 03:59:52.084986"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zach@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "zach@debuggingthis.com"], ["first_name", "Zach"], ["last_name", "Beaver"], ["password_digest", "$2a$12$GXXCQox3HGLT9SjVVnGmo.K2gIhFjCfs8mLzi6yAvqC5IUTLGA.wO"], ["session_token", "ZPp6NuntBOD_dzrT69JBHA"], ["created_at", "2019-12-31 04:02:08.261379"], ["updated_at", "2019-12-31 04:02:08.261379"]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danielle@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "danielle@debuggingthis.com"], ["first_name", "Danielle"], ["last_name", "Tremonte"], ["password_digest", "$2a$12$pB/ZLffNdRTmQsp6hxW1SOQKkARPJlUR0YRd/Wa5EYBu9452doxgC"], ["session_token", "KKOIS02zaR8ZuDIDbrlO_w"], ["created_at", "2019-12-31 04:02:55.020290"], ["updated_at", "2019-12-31 04:02:55.020290"]]
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" ORDER BY "profiles"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (0.3ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 8], ["created_at", "2019-12-31 04:03:27.779075"], ["updated_at", "2019-12-31 04:03:27.779075"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jason@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jason@debuggingthis.com"], ["first_name", "Jason"], ["last_name", "Brodsky"], ["password_digest", "$2a$12$Sr1GoG.gtOJdpzeQSeThNOvQg6110VTanZ4XkqQvN2R3I6TwTWgMS"], ["session_token", "UQSf2EXT2wfDO4m_DWfa6Q"], ["created_at", "2019-12-31 04:06:30.516998"], ["updated_at", "2019-12-31 04:06:30.516998"]]
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Destroy (42.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mProfile Destroy (0.3ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 1]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 2]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 3]]
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 8]]
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 8]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 9], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 9]]
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 9]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$7pJwlHeFLz2m3RVELKVpFeCe0o8OZCHOCQDJWzVo6cjEikNSqsy/."], ["session_token", "S8eMKKAZsyZK0GQYT42IXg"], ["created_at", "2019-12-31 04:08:45.943632"], ["updated_at", "2019-12-31 04:08:45.943632"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (0.5ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 10], ["created_at", "2019-12-31 04:09:17.647317"], ["updated_at", "2019-12-31 04:09:17.647317"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alex@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "alex@debuggingthis.com"], ["first_name", "Alex"], ["last_name", "Tong"], ["password_digest", "$2a$12$ReioDXuyuc0X8SzNzaoCfOJnxkdwlUSli228nNwVbBTnaDylBGiDa"], ["session_token", "wzrWduP1SIZgyfG5nxJ9KQ"], ["created_at", "2019-12-31 04:09:43.421512"], ["updated_at", "2019-12-31 04:09:43.421512"]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (0.3ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 11], ["created_at", "2019-12-31 04:09:50.260773"], ["updated_at", "2019-12-31 04:09:50.260773"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  [1m[36mProfile Destroy (0.4ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 4]]
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 10]]
+  [1m[36mUserLesson Load (0.5ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 10]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  [1m[36mProfile Destroy (0.3ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 5]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

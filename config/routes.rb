@@ -1,23 +1,24 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "static_pages#root" 
+  root to: "static_pages#root" 
+
   resources :users, only: [:create, :show, :update] do 
-    resources :courses, only: [:index]
     resources :user_courses, only: [:create, :index, :update]
     resources :user_lessons, only: [:create, :index, :update]
   end 
+
+  resource :session, only: [:create, :destroy]
     
-  resources :profiles, only: [:create, :show, :update]
-  resources :courses, only: [:create, :index, :show, :destroy, :update] do 
+  resources :profiles, only: [:show, :update]
+
+  resources :courses, only: [:index, :show] do 
     resources :lessons, only: :index 
   end 
 
-  resources :lessons, only: [:create, :index, :show, :destroy, :update] 
+  resources :lessons, only: [:index, :show] 
 
-  resources :tags, only: [:create, :index, :show, :destroy, :update] do
+  resources :tags, only: [:index, :show] do 
     resources :tag_courses, only: :index 
   end 
-
-  resources :tag_courses, only: [:create, :destroy] 
 
 end

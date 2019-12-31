@@ -514,3 +514,369 @@ Migrating to ChangeDefaultUserCourses (20191230021940)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (41.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$Fl2zwnVoNcRPjLb7nJwBZ.wWUu1VRWUNWah9JMPzst.PxP8mGynBq"], ["session_token", "GMQ3TPGDHt0c9jxmNfyK6w"], ["created_at", "2019-12-31 15:16:08.451447"], ["updated_at", "2019-12-31 15:16:08.451447"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 12], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (41.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 12]]
+  [1m[36mUserLesson Load (0.5ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 12]]
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$C3oB7q.6WtgOsy8aU5fyqeofn/xTDVkUH32pHr.M6LP4syjpCsTNu"], ["session_token", "lPc4Hdmd0VkGR_vziY80vQ"], ["created_at", "2019-12-31 15:20:06.638406"], ["updated_at", "2019-12-31 15:20:06.638406"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alex@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "alex@debuggingthis.com"], ["first_name", "Alex"], ["last_name", "Tong"], ["password_digest", "$2a$12$nhjBy5qDO16JESSHfZFjVeuk8b3QfaSvJ/Jc7ZlPDzQq/HcFko7PO"], ["session_token", "4GhvK68HSCAbGmT7RDrfHA"], ["created_at", "2019-12-31 15:21:45.098291"], ["updated_at", "2019-12-31 15:21:45.098291"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" ORDER BY "profiles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cathy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cathy@debuggingthis.com"], ["first_name", "Cathy"], ["last_name", "Tong"], ["password_digest", "$2a$12$y3B.pFYl5X1I.F4xrvs5RebnHKI/wwKopS5KojXJJenH8UIge1dVG"], ["session_token", "Rzh7B5umTFRj9jneRU52sQ"], ["created_at", "2019-12-31 15:22:15.713256"], ["updated_at", "2019-12-31 15:22:15.713256"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mike@debuggingthis.com"], ["first_name", "Mike"], ["last_name", "Tong"], ["password_digest", "$2a$12$KGPF0c87biYxJfTBgpeZ3u9DoiOh33I5T2DN.WmkYI2zgORH10zP6"], ["session_token", "2R27bWjw5vwtE_7qPQRkOg"], ["created_at", "2019-12-31 15:23:13.013468"], ["updated_at", "2019-12-31 15:23:13.013468"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brendan@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "brendan@debuggingthis.com"], ["first_name", "Brendan"], ["last_name", "Lukas"], ["password_digest", "$2a$12$46kCKV.SFfTzlKQmiU1BZOGbxbbel4xUSN8a2yTGEO3iZ6tIc1Efu"], ["session_token", "sADSjo4FbtFTgZTz-UzZeg"], ["created_at", "2019-12-31 15:23:39.173375"], ["updated_at", "2019-12-31 15:23:39.173375"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brendan@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grace@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "grace@debuggingthis.com"], ["first_name", "Grace"], ["last_name", "Beaver"], ["password_digest", "$2a$12$XbeaCRitVFcl7daXSHuMJ.6Wrdj2GQkURfDyIB9ExseK4Fp1YP6O6"], ["session_token", "Jn00I1pUaHBp6GjKeC08lQ"], ["created_at", "2019-12-31 15:24:25.074172"], ["updated_at", "2019-12-31 15:24:25.074172"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 13], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 13]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 13]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[36mUserLesson Load (0.3ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 15], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 15]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 15]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 16], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 16]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 16]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 17]]
+  [1m[36mUserLesson Load (0.3ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 17]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 18], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 18]]
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 18]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$5V46wIh/WRrs8WTmAIcIK.NjHtCwOOZZCBDhmMVxLsUAK3beW/zwi"], ["session_token", "Rzd8rhyQtlphZgR1nZhjDQ"], ["created_at", "2019-12-31 15:29:12.500653"], ["updated_at", "2019-12-31 15:29:12.500653"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+Started GET "/" for ::1 at 2019-12-31 10:31:03 -0500
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/2622cce2039af5f4/variables" for ::1 at 2019-12-31 10:31:03 -0500
+Started GET "/" for ::1 at 2019-12-31 10:31:39 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 17ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-12-31 10:31:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 19]]
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 19]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started PATCH "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:33:20 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:34:02 -0500
+
+NameError - uninitialized constant UsersController:
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:35:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:37:47 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 8.4ms)
+
+
+
+NameError - undefined local variable or method `user' for #<UsersController:0x00007f964c44c7a0>
+Did you mean?  @user:
+  app/controllers/users_controller.rb:7:in `create'
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:38:08 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 422 Unprocessable Entity in 23ms (Views: 0.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:38:38 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 422 Unprocessable Entity in 23ms (Views: 0.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:38:48 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (5.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 189073ms (Views: 0.3ms | ActiveRecord: 18.3ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:42:08 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 43157ms (Views: 0.3ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:43:03 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 7.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/models/user.rb:33:in `password='
+  app/controllers/users_controller.rb:3:in `create'
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:46:06 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 128047ms (Views: 0.4ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2019-12-31 10:53:13 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 11174ms (Views: 0.2ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[password]=[FILTERED]&user[first_name]=cindy&user[last_name]=tong" for ::1 at 2019-12-31 10:53:53 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "password"=>"[FILTERED]", "first_name"=>"cindy", "last_name"=>"tong"}}
+Unpermitted parameter: :password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 41529ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[password]=[FILTERED]&user[first_name]=cindy&user[last_name]=tong" for ::1 at 2019-12-31 10:54:37 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "password"=>"[FILTERED]", "first_name"=>"cindy", "last_name"=>"tong"}}
+Unpermitted parameter: :password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 15893ms (Views: 0.2ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[password]=[FILTERED]&user[first_name]=cindy&user[last_name]=tong" for ::1 at 2019-12-31 10:55:22 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "password"=>"[FILTERED]", "first_name"=>"cindy", "last_name"=>"tong"}}
+Unpermitted parameter: :password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 12776ms (Views: 0.3ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/users?user[email]=cindy@debuggingthis.com&user[password]=[FILTERED]&user[first_name]=cindy&user[last_name]=tong" for ::1 at 2019-12-31 10:55:55 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@debuggingthis.com", "password"=>"[FILTERED]", "first_name"=>"cindy", "last_name"=>"tong"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "cindy"], ["last_name", "tong"], ["password_digest", "$2a$12$1BBekP5N9tT6tlDe5v8s9uF3QkzfUfZWgiZDKpnKc739GkVHg4v.2"], ["session_token", "IceX0bi6R4V_H0zFU16G5w"], ["created_at", "2019-12-31 15:56:20.470099"], ["updated_at", "2019-12-31 15:56:20.470099"]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 201 Created in 25004ms (Views: 0.7ms | ActiveRecord: 47.8ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m

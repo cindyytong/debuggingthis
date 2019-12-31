@@ -1,4 +1,3 @@
-require 'byebug'
 require 'profile'
 
 class User < ApplicationRecord 
@@ -21,7 +20,7 @@ class User < ApplicationRecord
     has_many :lessons,
     through: :user_lessons 
 
-    after_commit :create_profile, on: :create
+    # after_commit :create_profile, on: :create
 
     attr_reader :password 
 
@@ -43,17 +42,19 @@ class User < ApplicationRecord
         SecureRandom.urlsafe_base64 
     end 
 
+    def reset_session_token!
+        self.session_token = self.generate_session_token 
+        self.save 
+        self.session_token
+    end 
+
+    private 
+
     def ensure_session_token 
         self.session_token ||= self.generate_session_token
     end 
 
-    def reset_session_token!
-        self.session_token = self.generate_session_token 
-        self.save! 
-        self.session_token
-    end 
-
-    def create_profile 
-        Profile.new(self)
-    end 
+    # def create_profile 
+    #     Profile.new(self)
+    # end 
 end 

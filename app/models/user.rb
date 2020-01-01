@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 8, allow_nil: true, message: 'must be greater than 8 characters' } 
 
     after_initialize :ensure_session_token
+    after_create :create_profile
     
     has_one :profile, dependent: :destroy  
     has_many :user_courses, dependent: :destroy
@@ -19,8 +20,6 @@ class User < ApplicationRecord
     
     has_many :lessons,
     through: :user_lessons 
-
-    # after_commit :create_profile, on: :create
 
     attr_reader :password 
 

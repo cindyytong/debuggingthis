@@ -8834,3 +8834,289 @@ Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.0ms)
   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
   [1m[36mTagCourse Load (0.4ms)[0m  [1m[34mSELECT  "tag_courses".* FROM "tag_courses" ORDER BY "tag_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+Started GET "/signup" for ::1 at 2020-01-04 15:08:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/signup?user[email]=cindy@gmail.com&user[first_name]=cindy&user[last_name]=tong&user[password]=[FILTERED]" for ::1 at 2020-01-04 15:10:35 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"cindy@gmail.com", "first_name"=>"cindy", "last_name"=>"tong", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@gmail.com"], ["first_name", "cindy"], ["last_name", "tong"], ["password_digest", "$2a$12$dZ4Gl4tbZwDv97XsLinxLuLBmhCKGZ8GLXsvneVYpQayaO6dpo2kW"], ["session_token", "-iLHYZ0P6fKHRsrNP0o8ag"], ["created_at", "2020-01-04 20:10:35.530613"], ["updated_at", "2020-01-04 20:10:35.530613"]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 123], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.6ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 123], ["created_at", "2020-01-04 20:10:35.556096"], ["updated_at", "2020-01-04 20:10:35.556096"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 201 Created in 277ms (Views: 0.9ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-04 15:20:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 16ms (ActiveRecord: 8.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User without an ID:
+  app/controllers/users_controller.rb:12:in `show'
+
+Started POST "/__better_errors/84cafb8ad2922aab/variables" for ::1 at 2020-01-04 15:20:59 -0500
+Started GET "/users/1" for ::1 at 2020-01-04 15:21:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 404 Not Found in 13ms (ActiveRecord: 5.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=1:
+  app/controllers/users_controller.rb:12:in `show'
+
+Started POST "/__better_errors/dd976a83cd1eab45/variables" for ::1 at 2020-01-04 15:21:14 -0500
+Started GET "/users/1" for ::1 at 2020-01-04 15:21:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=1:
+  app/controllers/users_controller.rb:12:in `show'
+
+Started POST "/__better_errors/089e4cddf92a5194/variables" for ::1 at 2020-01-04 15:21:21 -0500
+Started GET "/users/1" for ::1 at 2020-01-04 15:21:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 404 Not Found in 14ms (ActiveRecord: 5.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=1:
+  app/controllers/users_controller.rb:12:in `show'
+
+Started POST "/__better_errors/14ee98492d4b19d1/variables" for ::1 at 2020-01-04 15:21:36 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/users/1" for ::1 at 2020-01-04 15:24:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/114" for ::1 at 2020-01-04 15:25:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/114?=" for ::1 at 2020-01-04 15:29:03 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"114"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 6.6ms)
+
+
+Started PATCH "/users/114?user[first_name]=cindy" for ::1 at 2020-01-04 18:15:14 -0500
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"first_name"=>"cindy"}, "id"=>"114"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "cindy@debuggingthis.com"], ["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["first_name", "cindy"], ["updated_at", "2020-01-04 23:15:14.492589"], ["id", 114]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 48ms (Views: 0.7ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/users/profile" for ::1 at 2020-01-04 18:23:06 -0500
+
+NameError - uninitialized constant ProfileController:
+
+Started GET "/users/114/profile" for ::1 at 2020-01-04 18:23:46 -0500
+
+NameError - uninitialized constant ProfileController:
+
+Started GET "/users/114/profile" for ::1 at 2020-01-04 18:24:13 -0500
+
+NameError - uninitialized constant ProfileController:
+
+Started GET "/users/114/profile" for ::1 at 2020-01-04 18:24:49 -0500
+Processing by ProfilesController#show as */*
+  Parameters: {"id"=>"114"}
+Completed 404 Not Found in 17658ms (ActiveRecord: 9.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Profile without an ID:
+  app/controllers/profiles_controller.rb:4:in `show'
+
+Started GET "/users/114/profile" for ::1 at 2020-01-04 18:25:28 -0500
+Processing by ProfilesController#show as */*
+  Parameters: {"id"=>"114"}
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:4
+Completed 404 Not Found in 2219ms (ActiveRecord: 7.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Profile with 'id'=114:
+  app/controllers/profiles_controller.rb:4:in `show'
+
+Started GET "/users/114/profile" for ::1 at 2020-01-04 18:26:09 -0500
+Processing by ProfilesController#show as */*
+  Parameters: {"id"=>"114"}
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:3
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 7.7ms)
+
+
+Started PATCH "/users/114/profile?profile[linkedin_url]=https://www.linkedin.com/in/heytong/" for ::1 at 2020-01-04 18:26:51 -0500
+Processing by ProfilesController#update as */*
+  Parameters: {"profile"=>{"linkedin_url"=>"https://www.linkedin.com/in/heytong/"}, "id"=>"114"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/profiles_controller.rb:13
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:13
+  [1m[36mProfile Update (1.6ms)[0m  [1m[33mUPDATE "profiles" SET "linkedin_url" = $1, "updated_at" = $2 WHERE "profiles"."id" = $3[0m  [["linkedin_url", "https://www.linkedin.com/in/heytong/"], ["updated_at", "2020-01-04 23:26:51.598274"], ["id", 82]]
+  ↳ app/controllers/profiles_controller.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/profiles_controller.rb:13
+Completed 200 OK in 47ms (Views: 1.2ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/courses" for ::1 at 2020-01-04 18:35:06 -0500
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 22ms (Views: 6.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/114/courses" for ::1 at 2020-01-04 18:35:20 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"114"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:5
+Completed 404 Not Found in 14ms (ActiveRecord: 5.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=user_id:
+  app/controllers/courses_controller.rb:5:in `index'
+
+Started GET "/users/114/courses" for ::1 at 2020-01-04 18:35:48 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"114"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 20ms (Views: 8.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/courses" for ::1 at 2020-01-04 18:35:58 -0500
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/115/courses" for ::1 at 2020-01-04 18:36:07 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"115"}
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 115], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "user_courses" ON "courses"."id" = "user_courses"."course_id" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 114]]
+Started GET "/users/115/courses" for ::1 at 2020-01-04 18:38:03 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"115"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 19ms (Views: 7.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/114/courses" for ::1 at 2020-01-04 18:38:07 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"114"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 114]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" IN ($1, $2)[0m  [["id", 39], ["id", 40]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "user_courses" ON "courses"."id" = "user_courses"."course_id" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 114]]
+Started GET "/users/114/courses" for ::1 at 2020-01-04 18:40:19 -0500
+Processing by CoursesController#index as */*
+  Parameters: {"user_id"=>"114"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:9
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 5.4ms)
+
+

@@ -16,7 +16,7 @@ class User < ApplicationRecord
     dependent: :destroy
     
     has_many :courses, 
-    through: :user_courses,
+    through: :course_enrollments,
     source: :course
 
     has_many :user_lessons, dependent: :destroy

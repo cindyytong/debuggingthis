@@ -11,15 +11,21 @@ class User < ApplicationRecord
     after_create :create_profile
     
     has_one :profile, dependent: :destroy  
-    has_many :user_courses, dependent: :destroy
+
+    has_many :course_enrollments,
+    class_name: :UserCourse,
+    foreign_key: :user_id, 
+    dependent: :destroy
     
     has_many :courses, 
-    through: :user_courses
+    through: :user_courses,
+    source: :course
 
     has_many :user_lessons, dependent: :destroy
     
     has_many :lessons,
-    through: :user_lessons 
+    through: :user_lessons,
+    source: :lesson 
 
     attr_reader :password 
 

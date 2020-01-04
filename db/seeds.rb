@@ -25,3 +25,55 @@ user6 = User.create!({email: 'grace@debuggingthis.com', first_name: 'Grace', las
 user7 = User.create!({email: 'zach@debuggingthis.com', first_name: 'Zach', last_name: 'Beaver', password: '12345678'})
 user8 = User.create!({email: 'danielle@debuggingthis.com', first_name: 'Danielle', last_name: 'Tremonte', password: '12345678'})
 user9 = User.create!({email: 'jason@debuggingthis.com', first_name: 'Jason', last_name: 'Brodsky', password: '12345678'})
+
+ruby = Course.create!(title: "Intro to Ruby", description: "Learn about Ruby fundamentals and more")
+javascript = Course.create!(title: "Intro to Javascript", description: "Learn about Javascript fundamentals and more")
+sql = Course.create!(title: "How SQL works", description: "Learn about querying a database using SQL")
+react = Course.create!(title: "React 101", description: "React and Redux fundamentals")
+
+# user1 enrolled in 2 courses 
+UserCourse.create!(user_id: user1.id, course_id: ruby.id)
+UserCourse.create!(user_id: user1.id, course_id: javascript.id)
+
+# user2 enrolled in all 4 courses 
+UserCourse.create!(user_id: user2.id, course_id: ruby.id)
+UserCourse.create!(user_id: user2.id, course_id: javascript.id)
+UserCourse.create!(user_id: user2.id, course_id: sql.id)
+UserCourse.create!(user_id: user2.id, course_id: react.id)
+
+# user3 enrolled in all courses 
+UserCourse.create!(user_id: user3.id, course_id: ruby.id)
+UserCourse.create!(user_id: user3.id, course_id: javascript.id)
+UserCourse.create!(user_id: user3.id, course_id: sql.id)
+UserCourse.create!(user_id: user3.id, course_id: react.id)
+
+
+### Lessons 
+ruby101 = Lesson.create!(title: 'Ruby lesson 1', course_id: ruby.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
+ruby102 = Lesson.create!(title: 'Ruby lesson 2', course_id: ruby.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
+ruby103 = Lesson.create!(title: 'Ruby lesson 3', course_id: ruby.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
+
+javascript101 = Lesson.create!(title: 'Javascript lesson 1', course_id: javascript.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
+javascript102 = Lesson.create!(title: 'Javascript lesson 2', course_id: javascript.id, duration: 80, lesson_content: 'Here is the lesson course text for this really fun lesson')
+javascript103 = Lesson.create!(title: 'Javascript lesson 3', course_id: javascript.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
+
+sql101 = Lesson.create!(title: 'SQL lesson 1', course_id: sql.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
+sql102 = Lesson.create!(title: 'SQL lesson 2', course_id: sql.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
+
+react101 = Lesson.create!(title: 'React lesson 1', course_id: react.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react102 = Lesson.create!(title: 'React lesson 2', course_id: react.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react103 = Lesson.create!(title: 'React lesson 3', course_id: react.id, duration: 40, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react104 = Lesson.create!(title: 'React lesson 4', course_id: react.id, duration: 80, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react105 = Lesson.create!(title: 'React lesson 5', course_id: react.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react106 = Lesson.create!(title: 'React lesson 6', course_id: react.id, duration: 15, lesson_content: 'Here is the lesson course text for this really fun lesson')
+
+# User Lesson 
+UserLesson.create!(user_id: user1.id, lesson_id: ruby101.id)
+UserLesson.create!(user_id: user1.id, lesson_id: ruby102.id)
+UserLesson.create!(user_id: user1.id, lesson_id: ruby103.id)
+
+UserLesson.create!(user_id: user2.id, lesson_id: ruby101.id)
+UserLesson.create!(user_id: user2.id, lesson_id: javascript101.id)
+UserLesson.create!(user_id: user2.id, lesson_id: sql101.id)
+
+UserLesson.create!(user_id: user3.id, lesson_id: sql101.id)

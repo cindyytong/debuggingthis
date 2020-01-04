@@ -2,5 +2,10 @@ class Lesson < ApplicationRecord
     validates :title, presence: true 
 
     belongs_to :course 
-    has_many :user_lessons, dependent: :destroy
+
+    has_many :user_enrollments, 
+    class_name: :UserLesson,
+    foreign_key: :lesson_id,
+    dependent: :destroy
+
 end 

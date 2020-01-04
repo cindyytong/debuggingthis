@@ -8,4 +8,8 @@ class Lesson < ApplicationRecord
     foreign_key: :lesson_id,
     dependent: :destroy
 
+    has_many :users,
+    through: :user_enrollments,
+    source: :user
+
 end 

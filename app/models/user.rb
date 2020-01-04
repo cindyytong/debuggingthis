@@ -1,5 +1,3 @@
-require 'profile'
-
 class User < ApplicationRecord 
     validates :first_name, :last_name, :password_digest, :session_token, presence: { message: 'must not be blank '}
     validates :email, presence: true, uniqueness: { message: 'already registered'}, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'must be a valid email address'}
@@ -59,7 +57,7 @@ class User < ApplicationRecord
         self.session_token ||= self.generate_session_token
     end 
 
-    # def create_profile 
-    #     Profile.new(self)
-    # end 
+    def create_profile 
+        Profile.create(user_id: self.id)
+    end 
 end 

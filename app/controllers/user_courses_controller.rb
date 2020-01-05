@@ -17,16 +17,15 @@ class UserCoursesController < ApplicationController
         end 
     end 
 
-    def complete # course if complete if all lessons are complete 
-        @user_course = UserCourse.find(params[:id])
-        if @user_course.completed == true 
-            render json: :course_already_completed
-        else
-            @user_course.completed = true
-            @user_course.save 
-            render json: :course_completed
-        end  
-    end 
+    # def complete # course is complete if the final lesson is completed 
+    #     @user_course = UserCourse.find(params[:id])
+    #     if @user_course.completed == true 
+    #         render json: :course_already_completed
+    #     else
+    #         @user_course.
+    #         render json: :course_completed
+    #     end  
+    # end 
 
     private 
     def user_course_params 

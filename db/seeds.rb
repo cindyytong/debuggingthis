@@ -54,21 +54,21 @@ UserCourse.create!(user_id: user3.id, course_id: react.id)
 ################### Lessons ###################
 ruby101 = Lesson.create!(title: 'Ruby lesson 1', course_id: ruby.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
 ruby102 = Lesson.create!(title: 'Ruby lesson 2', course_id: ruby.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
-ruby103 = Lesson.create!(title: 'Ruby lesson 3', course_id: ruby.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
+ruby103 = Lesson.create!(title: 'Ruby lesson 3', course_id: ruby.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson', final_lesson: true)
 
 javascript101 = Lesson.create!(title: 'Javascript lesson 1', course_id: javascript.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
 javascript102 = Lesson.create!(title: 'Javascript lesson 2', course_id: javascript.id, duration: 80, lesson_content: 'Here is the lesson course text for this really fun lesson')
-javascript103 = Lesson.create!(title: 'Javascript lesson 3', course_id: javascript.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
+javascript103 = Lesson.create!(title: 'Javascript lesson 3', course_id: javascript.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson', final_lesson: true)
 
 sql101 = Lesson.create!(title: 'SQL lesson 1', course_id: sql.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
-sql102 = Lesson.create!(title: 'SQL lesson 2', course_id: sql.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
+sql102 = Lesson.create!(title: 'SQL lesson 2', course_id: sql.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson', final_lesson: true)
 
 react101 = Lesson.create!(title: 'React lesson 1', course_id: react.id, duration: 20, lesson_content: 'Here is the lesson course text for this really fun lesson')
 react102 = Lesson.create!(title: 'React lesson 2', course_id: react.id, duration: 10, lesson_content: 'Here is the lesson course text for this really fun lesson')
 react103 = Lesson.create!(title: 'React lesson 3', course_id: react.id, duration: 40, lesson_content: 'Here is the lesson course text for this really fun lesson')
 react104 = Lesson.create!(title: 'React lesson 4', course_id: react.id, duration: 80, lesson_content: 'Here is the lesson course text for this really fun lesson')
 react105 = Lesson.create!(title: 'React lesson 5', course_id: react.id, duration: 30, lesson_content: 'Here is the lesson course text for this really fun lesson')
-react106 = Lesson.create!(title: 'React lesson 6', course_id: react.id, duration: 15, lesson_content: 'Here is the lesson course text for this really fun lesson')
+react106 = Lesson.create!(title: 'React lesson 6', course_id: react.id, duration: 15, lesson_content: 'Here is the lesson course text for this really fun lesson', final_lesson: true)
 
 ################### User Lesson ###################
 UserLesson.create!(user_id: user1.id, lesson_id: ruby101.id)

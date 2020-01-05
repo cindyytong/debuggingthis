@@ -16,4 +16,8 @@ class Course < ApplicationRecord
     has_many :enrolled_users,
     through: :enrollments,
     source: :user 
+
+    def final_lesson 
+        self.lessons.find_by(final_lesson: true)
+    end 
 end 

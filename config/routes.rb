@@ -22,12 +22,8 @@ Rails.application.routes.draw do
     resources :tag_courses, only: :index 
   end 
 
-  resources :user_courses, only: [:create, :show] do 
-    member do 
-     patch '/complete', to: 'user_courses#complete'
-    end 
-  end   
-
+  resources :user_courses, only: [:create, :show] 
+  
   resources :user_lessons, only: [:create, :show] do 
     member do
       patch '/complete', to: 'user_lessons#complete' 

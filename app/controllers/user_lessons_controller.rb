@@ -1,5 +1,5 @@
 class UserLessonsController < ApplicationController 
-    def create 
+    def create  # start a lesson 
         @user_lesson = UserLesson.new(user_lesson_params)
         if @user_lesson.save 
             render json: @user_lesson
@@ -17,20 +17,19 @@ class UserLessonsController < ApplicationController
         end 
     end 
 
-    def complete
+    def complete # click the complete button on a lesson 
         @user_lesson = UserLesson.find(params[:id])
         if @user_lesson.completed == true 
             render json: :lesson_already_completed
-        else
-            @user_lesson.completed = true
-            @user_lesson.save 
-            render json: :lesson_completed
+        else 
+            @user_lesson.complete_lesson 
+            render json: @user_lesson
         end  
     end 
 
     private 
 
     def user_lesson_params 
-        params.require(:user_lesson).permit(:user_id, :lesson_id, :completed)
+        params.require(:user_lesson).permit(:user_id, :lesson_id, :completed, :final_lesson)
     end 
 end 

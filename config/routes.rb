@@ -10,17 +10,27 @@ Rails.application.routes.draw do
       patch '/profile', to: 'profiles#update'
     end 
     
-    resources :courses, only: [:index]
+    resources :courses, only: [:index]  # is this needed? 
   end 
     
-  resources :courses, only: [:index, :show, :create, :destroy] do 
-    resources :lessons, only: :index 
+  resources :courses, only: [:index, :show] do 
+    resources :lessons, only: [:index, :show]
+    resources :tags, only: [:index] 
   end 
 
-  # resources :lessons, only: [:index, :show] 
+  resources :tags, only: [:index, :show] do 
+    resources :tag_courses, only: :index 
+  end 
 
-  # resources :tags, only: [:index, :show] do 
-  #   resources :tag_courses, only: :index 
-  # end 
+  resources :user_courses, only: [:create, :show] do 
+    member do 
+     patch '/complete', to: 'user_courses#complete'
+    end 
+  end   
 
+  resources :user_lessons, only: [:create, :show] do 
+    member do
+      patch '/complete', to: 'user_lessons#complete' 
+    end 
+  end   
 end

@@ -9120,3 +9120,2080 @@ Processing by CoursesController#index as */*
 Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 5.4ms)
 
 
+  [1m[36mCourse Load (11.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLesson Load (1.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 39]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/courses/39" for ::1 at 2020-01-05 10:55:33 -0500
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14
+Completed 200 OK in 71ms (Views: 0.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/courses/39/lessons" for ::1 at 2020-01-05 10:55:40 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"39"}
+  [1m[36mLesson Load (0.5ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 10:55:48 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 10:55:57 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 10:56:38 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 10:56:56 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:01:00 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.5ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:01:03 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:01:13 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ app/controllers/lessons_controller.rb:5
+  [1m[36mLesson Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mLesson Load (1.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 38]]
+  ↳ app/controllers/lessons_controller.rb:5
+Completed 200 OK in 32286ms (Views: 1.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:01:52 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.3ms)
+
+
+
+ActionView::MissingTemplate - Missing template lessons/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/cindytong/Desktop/debuggingthis/app/views"
+:
+  app/controllers/lessons_controller.rb:4:in `index'
+
+Started POST "/__better_errors/d774352fb4e79e5c/variables" for ::1 at 2020-01-05 11:01:52 -0500
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:02:22 -0500
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+...s.empty? (render status: 422) : (render json: @lessons)
+...                              ^:
+  app/controllers/lessons_controller.rb:4:in `'
+
+Started POST "/__better_errors/16f5d8740b56c4dd/variables" for ::1 at 2020-01-05 11:02:22 -0500
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:02:40 -0500
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+...s.empty? (render status: 422) : (render json: @lessons)
+...                              ^:
+  app/controllers/lessons_controller.rb:5:in `'
+
+Started POST "/__better_errors/bccc4a970176598f/variables" for ::1 at 2020-01-05 11:02:41 -0500
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:02:55 -0500
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+...ns.empty? (render status: 422):(render json: @lessons)
+...                              ^:
+  app/controllers/lessons_controller.rb:5:in `'
+
+Started POST "/__better_errors/3c010ef86dd4326e/variables" for ::1 at 2020-01-05 11:02:55 -0500
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:03:45 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.3ms)
+
+
+
+ActionView::MissingTemplate - Missing template lessons/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/cindytong/Desktop/debuggingthis/app/views"
+:
+  app/controllers/lessons_controller.rb:5:in `index'
+
+Started POST "/__better_errors/b48b180dedfd75a5/variables" for ::1 at 2020-01-05 11:03:45 -0500
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:04:21 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/courses/38/lessons" for ::1 at 2020-01-05 11:04:33 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"38"}
+  [1m[36mLesson Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:4
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/courses/39/lessons" for ::1 at 2020-01-05 11:04:54 -0500
+Processing by LessonsController#index as HTML
+  Parameters: {"course_id"=>"39"}
+  [1m[36mLesson Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "lessons" WHERE "lessons"."course_id" = $1 LIMIT $2[0m  [["course_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:4
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ app/controllers/lessons_controller.rb:7
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/courses/39/lessons/1" for ::1 at 2020-01-05 11:05:03 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"1"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Lesson with 'id'=1:
+  app/controllers/lessons_controller.rb:12:in `show'
+
+Started POST "/__better_errors/0e8e8f8944b97fad/variables" for ::1 at 2020-01-05 11:05:03 -0500
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/courses/39/lessons/94" for ::1 at 2020-01-05 11:05:28 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"94"}
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses/39/lessons/94" for ::1 at 2020-01-05 11:05:54 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"94"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courses/39/lessons/1" for ::1 at 2020-01-05 11:06:00 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"1"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Lesson with 'id'=1:
+  app/controllers/lessons_controller.rb:12:in `show'
+
+Started POST "/__better_errors/0c24a6636b4c1f4c/variables" for ::1 at 2020-01-05 11:06:00 -0500
+Started GET "/courses/39/lessons/1" for ::1 at 2020-01-05 11:06:24 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"1"}
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/courses/39/lessons/50" for ::1 at 2020-01-05 11:13:06 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"50"}
+  [1m[36mLesson Load (0.5ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/courses/39/lessons/50" for ::1 at 2020-01-05 11:13:43 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"50"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mLesson Load (0.5ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/courses/39/lessons/94" for ::1 at 2020-01-05 11:13:53 -0500
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"39", "id"=>"94"}
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:12
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/courses/39/lessons/94" for ::1 at 2020-01-05 11:14:14 -0500
+
+SyntaxError - syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+        @lesson ? render json: @lesson : render json: :no_l...
+                         ^~~~~:
+  app/controllers/lessons_controller.rb:14:in `'
+
+Started POST "/__better_errors/f0d57db3f4589054/variables" for ::1 at 2020-01-05 11:14:15 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:18:40 -0500
+
+NameError - uninitialized constant TagsController:
+
+Started POST "/__better_errors/7f520fc684cde6f0/variables" for ::1 at 2020-01-05 11:18:40 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:19:10 -0500
+
+NameError - uninitialized constant TagsController:
+
+Started POST "/__better_errors/fb17a799e64bd006/variables" for ::1 at 2020-01-05 11:19:11 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:19:17 -0500
+
+SyntaxError - syntax error, unexpected tLABEL
+        @tags.nil? (render: :no_tags_found, status: 404)...
+                    ^~~~~~~:
+  app/controllers/tags_controller.rb:8:in `'
+
+Started POST "/__better_errors/fb16cb6de4422005/variables" for ::1 at 2020-01-05 11:19:17 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:19:32 -0500
+
+SyntaxError - syntax error, unexpected tLABEL
+        @tags ? (render: :no_tags_found, status: 404)...
+                 ^~~~~~~:
+  app/controllers/tags_controller.rb:8:in `'
+
+Started POST "/__better_errors/34ffa2bc624b21fd/variables" for ::1 at 2020-01-05 11:19:33 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:19:45 -0500
+Processing by TagsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant TagsController::Tags:
+  app/controllers/tags_controller.rb:6:in `index'
+
+Started POST "/__better_errors/76988d063847491b/variables" for ::1 at 2020-01-05 11:19:45 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:19:59 -0500
+
+SyntaxError - syntax error, unexpected tLABEL
+        @tags.nil? (render: :no_tags_found, status: 404)...
+                    ^~~~~~~:
+  app/controllers/tags_controller.rb:8:in `'
+
+Started POST "/__better_errors/9d0bd1e13816fbeb/variables" for ::1 at 2020-01-05 11:19:59 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:20:15 -0500
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+... :no_tags_found, status: 404) : (render json: @tags) 
+...                              ^:
+  app/controllers/tags_controller.rb:8:in `'
+
+Started POST "/__better_errors/c0ec1ea706b43727/variables" for ::1 at 2020-01-05 11:20:15 -0500
+Started GET "/tags" for ::1 at 2020-01-05 11:20:34 -0500
+Processing by TagsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template tags/no_tags_found, application/no_tags_found with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/cindytong/Desktop/debuggingthis/app/views"
+:
+  app/controllers/tags_controller.rb:8:in `index'
+
+Started POST "/__better_errors/9df0b7ce631820e1/variables" for ::1 at 2020-01-05 11:20:35 -0500
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/tags" for ::1 at 2020-01-05 11:20:44 -0500
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/controllers/tags_controller.rb:8
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/courses/50/tags" for ::1 at 2020-01-05 11:20:56 -0500
+Processing by TagsController#index as HTML
+  Parameters: {"course_id"=>"50"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `tags' for #<Class:0x00007ff0926e1a38>:
+  app/controllers/tags_controller.rb:4:in `index'
+
+Started POST "/__better_errors/4b50f3a584330ba9/variables" for ::1 at 2020-01-05 11:20:56 -0500
+Started GET "/courses/50/tags" for ::1 at 2020-01-05 11:21:37 -0500
+Processing by TagsController#index as HTML
+  Parameters: {"course_id"=>"50"}
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:4
+Completed 404 Not Found in 15ms (ActiveRecord: 5.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Course with 'id'=50:
+  app/controllers/tags_controller.rb:4:in `index'
+
+Started POST "/__better_errors/2fb568c2b4a3ea28/variables" for ::1 at 2020-01-05 11:21:37 -0500
+Started GET "/courses/80/tags" for ::1 at 2020-01-05 11:21:46 -0500
+Processing by TagsController#index as HTML
+  Parameters: {"course_id"=>"80"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:4
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Course with 'id'=80:
+  app/controllers/tags_controller.rb:4:in `index'
+
+Started POST "/__better_errors/171336e2cb534348/variables" for ::1 at 2020-01-05 11:21:46 -0500
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/courses/39/tags" for ::1 at 2020-01-05 11:21:56 -0500
+Processing by TagsController#index as HTML
+  Parameters: {"course_id"=>"39"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:4
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_courses" ON "tags"."id" = "tag_courses"."tag_id" WHERE "tag_courses"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ app/controllers/tags_controller.rb:8
+Completed 200 OK in 40ms (Views: 12.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/tags" for ::1 at 2020-01-05 11:26:48 -0500
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/controllers/tags_controller.rb:8
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/tags/20" for ::1 at 2020-01-05 11:26:52 -0500
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTag Load (19.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE (20) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:12
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 19.6ms)
+
+
+
+PG::DatatypeMismatch - ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "tags".* FROM "tags" WHERE (20) LIMIT $1
+                                            ^
+:
+  app/controllers/tags_controller.rb:12:in `show'
+
+Started POST "/__better_errors/947d029204b320d2/variables" for ::1 at 2020-01-05 11:26:52 -0500
+Started GET "/tags/20" for ::1 at 2020-01-05 11:27:07 -0500
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:12
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/tags/19" for ::1 at 2020-01-05 11:27:15 -0500
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:12
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/user_course?user_course[user_id]=114&user_course[course_id]=39" for ::1 at 2020-01-05 11:41:19 -0500
+
+NameError - uninitialized constant UserCourseController:
+
+Started POST "/user_course?user_course[user_id]=114&user_course[course_id]=39" for ::1 at 2020-01-05 11:41:44 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/user_course"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user_course?user_course[user_id]=114&user_course[course_id]=39" for ::1 at 2020-01-05 11:41:48 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/user_course"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user_courses?user_course[user_id]=114&user_course[course_id]=39" for ::1 at 2020-01-05 11:42:00 -0500
+Processing by UserCoursesController#create as */*
+  Parameters: {"user_course"=>{"user_id"=>"114", "course_id"=>"39"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_courses_controller.rb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:4
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:4
+  [1m[36mUserCourse Create (45.4ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 114], ["course_id", 39], ["created_at", "2020-01-05 16:42:00.102449"], ["updated_at", "2020-01-05 16:42:00.102449"]]
+  ↳ app/controllers/user_courses_controller.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_courses_controller.rb:4
+Completed 200 OK in 119ms (Views: 0.5ms | ActiveRecord: 69.9ms)
+
+
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/user_courses/93" for ::1 at 2020-01-05 11:43:05 -0500
+Processing by UserCoursesController#show as */*
+  Parameters: {"id"=>"93"}
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:12
+Completed 200 OK in 20ms (Views: 0.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/user_courses/92" for ::1 at 2020-01-05 11:43:07 -0500
+Processing by UserCoursesController#show as */*
+  Parameters: {"id"=>"92"}
+  [1m[36mUserCourse Load (1.0ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:12
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUserCourse Load (0.5ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PATCH "/user_courses/93" for ::1 at 2020-01-05 11:44:50 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/user_courses/93"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:45:39 -0500
+
+NameError - uninitialized constant UserCourseController:
+
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:46:18 -0500
+
+NameError - uninitialized constant UserCourseController:
+
+Started PATCH "/user_course/93/complete" for ::1 at 2020-01-05 11:46:51 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/user_course/93/complete"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:47:55 -0500
+
+NameError - uninitialized constant UserCourseController:
+
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:48:08 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"93"}
+Completed 404 Not Found in 5870ms (ActiveRecord: 5.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find UserCourse without an ID:
+  app/controllers/user_courses_controller.rb:22:in `complete'
+
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:48:19 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"93"}
+Completed 404 Not Found in 9685ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find UserCourse without an ID:
+  app/controllers/user_courses_controller.rb:22:in `complete'
+
+Started PATCH "/user_courses/93/complete" for ::1 at 2020-01-05 11:48:33 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"93"}
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_courses_controller.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:23
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:23
+  [1m[36mUserCourse Update (40.6ms)[0m  [1m[33mUPDATE "user_courses" SET "completed" = $1, "updated_at" = $2 WHERE "user_courses"."id" = $3[0m  [["completed", true], ["updated_at", "2020-01-05 16:48:34.076692"], ["id", 93]]
+  ↳ app/controllers/user_courses_controller.rb:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_courses_controller.rb:23
+Completed 200 OK in 107ms (Views: 0.3ms | ActiveRecord: 57.1ms)
+
+
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.5ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.4ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 94]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 95]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.6ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 96]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 97]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 98]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 99]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 100]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 101]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 102]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 103]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_courses" WHERE "user_courses"."id" = $1[0m  [["id", 93]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserLesson Load (0.8ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.4ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 29]]
+  [1m[35m (34.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (1.0ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.5ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.6ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLesson Destroy (0.4ms)[0m  [1m[31mDELETE FROM "user_lessons" WHERE "user_lessons"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to UpdateUserCourseUniqueCombo (20200105165030)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mDROP INDEX  "index_user_courses_on_user_id_and_course_id"[0m
+  ↳ db/migrate/20200105165030_update_user_course_unique_combo.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP INDEX  "index_user_lessons_on_user_id_and_lesson_id"[0m
+  ↳ db/migrate/20200105165030_update_user_course_unique_combo.rb:4
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_user_courses_on_user_id_and_course_id" ON "user_courses"  ("user_id", "course_id")[0m
+  ↳ db/migrate/20200105165030_update_user_course_unique_combo.rb:6
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_user_lessons_on_user_id_and_lesson_id" ON "user_lessons"  ("user_id", "lesson_id")[0m
+  ↳ db/migrate/20200105165030_update_user_course_unique_combo.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200105165030"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8594230636022819130)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUserCourse Load (0.6ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUserLesson Load (0.7ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mLesson Load (0.6ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 94]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.4ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 94]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 95]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 95]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 96]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 96]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 97]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 97]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 98]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 98]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 99]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 99]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 100]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 100]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 101]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 101]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 102]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 102]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 103]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 103]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 104]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 104]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 105]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 105]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 106]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 106]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."lesson_id" = $1[0m  [["lesson_id", 107]]
+  ↳ db/seeds.rb:11
+  [1m[36mLesson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lessons" WHERE "lessons"."id" = $1[0m  [["id", 107]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Load (0.6ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ db/seeds.rb:12
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."course_id" = $1[0m  [["course_id", 39]]
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."course_id" = $1[0m  [["course_id", 40]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 40]]
+  ↳ db/seeds.rb:12
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."course_id" = $1[0m  [["course_id", 40]]
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."course_id" = $1[0m  [["course_id", 41]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tag_courses" WHERE "tag_courses"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 41]]
+  ↳ db/seeds.rb:12
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."course_id" = $1[0m  [["course_id", 41]]
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Load (0.4ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."course_id" = $1[0m  [["course_id", 42]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 42]]
+  ↳ db/seeds.rb:12
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."course_id" = $1[0m  [["course_id", 42]]
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTagCourse Load (0.4ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses"[0m
+  ↳ db/seeds.rb:13
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 20]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.4ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 21]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 22]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 23]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 24]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.2ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 25]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 26]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 27]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 28]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 29]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 30]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 31]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 32]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 33]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 34]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 35]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 36]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTagCourse Load (0.1ms)[0m  [1m[34mSELECT "tag_courses".* FROM "tag_courses" WHERE "tag_courses"."tag_id" = $1[0m  [["tag_id", 37]]
+  ↳ db/seeds.rb:14
+  [1m[36mTag Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.4ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 83]]
+  ↳ db/seeds.rb:15
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.5ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 84]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.4ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 85]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.3ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 86]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 87]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 88]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 89]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 90]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 91]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProfile Destroy (0.2ms)[0m  [1m[31mDELETE FROM "profiles" WHERE "profiles"."id" = $1[0m  [["id", 82]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 115], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 115]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 115]]
+  ↳ db/seeds.rb:16
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 116], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 116]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 116]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 117], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 117]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 117]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 118], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 118]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 118]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 119], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 119]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 119]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 120], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.2ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 120]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 120]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 121], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 121]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 121]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 122], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.2ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 122]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 122]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 123], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 123]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 123]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 114], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserCourse Load (0.1ms)[0m  [1m[34mSELECT "user_courses".* FROM "user_courses" WHERE "user_courses"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ db/seeds.rb:16
+  [1m[36mUserLesson Load (0.1ms)[0m  [1m[34mSELECT "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."user_id" = $1[0m  [["user_id", 114]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 114]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cindy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cindy@debuggingthis.com"], ["first_name", "Cindy"], ["last_name", "Tong"], ["password_digest", "$2a$12$zPIMNiltp7DlJlVpyjUt8e2VfVYqEWK8GUzl7HgXkkCNv9iiTt6.W"], ["session_token", "smFundE5WSq7Yjlw_ot-ag"], ["created_at", "2020-01-05 16:52:45.505156"], ["updated_at", "2020-01-05 16:52:45.505156"]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.5ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 124], ["created_at", "2020-01-05 16:52:45.509341"], ["updated_at", "2020-01-05 16:52:45.509341"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alex@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "alex@debuggingthis.com"], ["first_name", "Alex"], ["last_name", "Tong"], ["password_digest", "$2a$12$tDKExxYFeIjwbm1tZJykouXwa06mVM6SS0lxgVBA.J8kVzxf4K0Va"], ["session_token", "0o1mhE8wY5qrwSieVGYFuw"], ["created_at", "2020-01-05 16:52:45.726518"], ["updated_at", "2020-01-05 16:52:45.726518"]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 125], ["created_at", "2020-01-05 16:52:45.728484"], ["updated_at", "2020-01-05 16:52:45.728484"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cathy@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cathy@debuggingthis.com"], ["first_name", "Cathy"], ["last_name", "Tong"], ["password_digest", "$2a$12$cH8FgkyKOoMAaRDY7B2YOOZAk.YKmTEtmT1ICWqaqnpPTMcdQTKH6"], ["session_token", "ky6yrhIRjP_QXLlovklSSQ"], ["created_at", "2020-01-05 16:52:45.945608"], ["updated_at", "2020-01-05 16:52:45.945608"]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.3ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 126], ["created_at", "2020-01-05 16:52:45.947775"], ["updated_at", "2020-01-05 16:52:45.947775"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mike@debuggingthis.com"], ["first_name", "Mike"], ["last_name", "Tong"], ["password_digest", "$2a$12$PRxuF6rSTnpL90jM/anEquNwd1/2JVP2a07WYuTFA2psLlcNlyEQa"], ["session_token", "A9xbP_h1wAynjYyVe57CSA"], ["created_at", "2020-01-05 16:52:46.164343"], ["updated_at", "2020-01-05 16:52:46.164343"]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 127], ["created_at", "2020-01-05 16:52:46.166529"], ["updated_at", "2020-01-05 16:52:46.166529"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brendan@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "brendan@debuggingthis.com"], ["first_name", "Brendan"], ["last_name", "Lukas"], ["password_digest", "$2a$12$RKjBRpq4MyaeQq11y4K5.ezcyq9VAKcfOeq.G9A6HLgYYFM/GuUHS"], ["session_token", "BST1ocF9AmPpCux6Oxaxzw"], ["created_at", "2020-01-05 16:52:46.384364"], ["updated_at", "2020-01-05 16:52:46.384364"]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 128], ["created_at", "2020-01-05 16:52:46.386266"], ["updated_at", "2020-01-05 16:52:46.386266"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grace@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "grace@debuggingthis.com"], ["first_name", "Grace"], ["last_name", "Beaver"], ["password_digest", "$2a$12$c6/jRZkqVXyl2aFHzx39buHetkHR/KpVU1aNtmViTBgOPnBycEd6y"], ["session_token", "QLO6mcXPa7j2R2ri6GL4RQ"], ["created_at", "2020-01-05 16:52:46.604719"], ["updated_at", "2020-01-05 16:52:46.604719"]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 129], ["created_at", "2020-01-05 16:52:46.606700"], ["updated_at", "2020-01-05 16:52:46.606700"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zach@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "zach@debuggingthis.com"], ["first_name", "Zach"], ["last_name", "Beaver"], ["password_digest", "$2a$12$AXrLiifVh0uVxzAtPr1v2e2FOunheJ.exK6WCotOtVKaTTiiA15MC"], ["session_token", "L4IH8yR1ZylcQZ8u9t7A-w"], ["created_at", "2020-01-05 16:52:46.826555"], ["updated_at", "2020-01-05 16:52:46.826555"]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 130], ["created_at", "2020-01-05 16:52:46.828338"], ["updated_at", "2020-01-05 16:52:46.828338"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danielle@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "danielle@debuggingthis.com"], ["first_name", "Danielle"], ["last_name", "Tremonte"], ["password_digest", "$2a$12$SCzkSiQ4SIjru18bjcLl4eS2m.Ac6P.kyGuVLa3tMmH/jHagOrHuW"], ["session_token", "GBExH7idESVvKWqXs3mAoQ"], ["created_at", "2020-01-05 16:52:47.056222"], ["updated_at", "2020-01-05 16:52:47.056222"]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 131], ["created_at", "2020-01-05 16:52:47.058211"], ["updated_at", "2020-01-05 16:52:47.058211"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jason@debuggingthis.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jason@debuggingthis.com"], ["first_name", "Jason"], ["last_name", "Brodsky"], ["password_digest", "$2a$12$hFQHMn0RYOR5TkPrXyf5.uHmXvUr68yaP3WCumOOqX2QOMgEnOnU2"], ["session_token", "gi_CKE_MDHv_h6pqOb0fcg"], ["created_at", "2020-01-05 16:52:47.285237"], ["updated_at", "2020-01-05 16:52:47.285237"]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[36mProfile Create (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 132], ["created_at", "2020-01-05 16:52:47.287123"], ["updated_at", "2020-01-05 16:52:47.287123"]]
+  ↳ app/models/user.rb:61
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Intro to Ruby"], ["description", "Learn about Ruby fundamentals and more"], ["created_at", "2020-01-05 16:52:47.289530"], ["updated_at", "2020-01-05 16:52:47.289530"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Intro to Javascript"], ["description", "Learn about Javascript fundamentals and more"], ["created_at", "2020-01-05 16:52:47.292069"], ["updated_at", "2020-01-05 16:52:47.292069"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "How SQL works"], ["description", "Learn about querying a database using SQL"], ["created_at", "2020-01-05 16:52:47.293681"], ["updated_at", "2020-01-05 16:52:47.293681"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "React 101"], ["description", "React and Redux fundamentals"], ["created_at", "2020-01-05 16:52:47.295017"], ["updated_at", "2020-01-05 16:52:47.295017"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mUserCourse Create (0.6ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["course_id", 43], ["created_at", "2020-01-05 16:52:47.306414"], ["updated_at", "2020-01-05 16:52:47.306414"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mUserCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["course_id", 44], ["created_at", "2020-01-05 16:52:47.310297"], ["updated_at", "2020-01-05 16:52:47.310297"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUserCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["course_id", 43], ["created_at", "2020-01-05 16:52:47.313539"], ["updated_at", "2020-01-05 16:52:47.313539"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mUserCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["course_id", 44], ["created_at", "2020-01-05 16:52:47.317978"], ["updated_at", "2020-01-05 16:52:47.317978"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mUserCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["course_id", 45], ["created_at", "2020-01-05 16:52:47.321089"], ["updated_at", "2020-01-05 16:52:47.321089"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mUserCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["course_id", 46], ["created_at", "2020-01-05 16:52:47.323843"], ["updated_at", "2020-01-05 16:52:47.323843"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mUserCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 126], ["course_id", 43], ["created_at", "2020-01-05 16:52:47.326545"], ["updated_at", "2020-01-05 16:52:47.326545"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mUserCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 126], ["course_id", 44], ["created_at", "2020-01-05 16:52:47.329709"], ["updated_at", "2020-01-05 16:52:47.329709"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mUserCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 126], ["course_id", 45], ["created_at", "2020-01-05 16:52:47.333987"], ["updated_at", "2020-01-05 16:52:47.333987"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mUserCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 126], ["course_id", 46], ["created_at", "2020-01-05 16:52:47.337947"], ["updated_at", "2020-01-05 16:52:47.337947"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ruby lesson 1"], ["course_id", 43], ["duration", 20], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.345506"], ["updated_at", "2020-01-05 16:52:47.345506"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ruby lesson 2"], ["course_id", 43], ["duration", 10], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.348056"], ["updated_at", "2020-01-05 16:52:47.348056"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ruby lesson 3"], ["course_id", 43], ["duration", 30], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.350475"], ["updated_at", "2020-01-05 16:52:47.350475"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:59
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Javascript lesson 1"], ["course_id", 44], ["duration", 20], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.352661"], ["updated_at", "2020-01-05 16:52:47.352661"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:60
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Javascript lesson 2"], ["course_id", 44], ["duration", 80], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.354675"], ["updated_at", "2020-01-05 16:52:47.354675"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Javascript lesson 3"], ["course_id", 44], ["duration", 30], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.357337"], ["updated_at", "2020-01-05 16:52:47.357337"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "SQL lesson 1"], ["course_id", 45], ["duration", 20], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.359429"], ["updated_at", "2020-01-05 16:52:47.359429"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:64
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "SQL lesson 2"], ["course_id", 45], ["duration", 10], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.361484"], ["updated_at", "2020-01-05 16:52:47.361484"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 1"], ["course_id", 46], ["duration", 20], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.363573"], ["updated_at", "2020-01-05 16:52:47.363573"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:67
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 2"], ["course_id", 46], ["duration", 10], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.366782"], ["updated_at", "2020-01-05 16:52:47.366782"]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 3"], ["course_id", 46], ["duration", 40], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.369300"], ["updated_at", "2020-01-05 16:52:47.369300"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 4"], ["course_id", 46], ["duration", 80], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.371357"], ["updated_at", "2020-01-05 16:52:47.371357"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:70
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 5"], ["course_id", 46], ["duration", 30], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.373440"], ["updated_at", "2020-01-05 16:52:47.373440"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "course_id", "duration", "lesson_content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "React lesson 6"], ["course_id", 46], ["duration", 15], ["lesson_content", "Here is the lesson course text for this really fun lesson"], ["created_at", "2020-01-05 16:52:47.375435"], ["updated_at", "2020-01-05 16:52:47.375435"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mUserLesson Create (0.6ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["lesson_id", 108], ["created_at", "2020-01-05 16:52:47.387659"], ["updated_at", "2020-01-05 16:52:47.387659"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+  [1m[36mUserLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["lesson_id", 109], ["created_at", "2020-01-05 16:52:47.391518"], ["updated_at", "2020-01-05 16:52:47.391518"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:76
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mUserLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["lesson_id", 110], ["created_at", "2020-01-05 16:52:47.394366"], ["updated_at", "2020-01-05 16:52:47.394366"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:76
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:78
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ db/seeds.rb:78
+  [1m[36mUserLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["lesson_id", 108], ["created_at", "2020-01-05 16:52:47.397712"], ["updated_at", "2020-01-05 16:52:47.397712"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:79
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:79
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 111], ["LIMIT", 1]]
+  ↳ db/seeds.rb:79
+  [1m[36mUserLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["lesson_id", 111], ["created_at", "2020-01-05 16:52:47.401827"], ["updated_at", "2020-01-05 16:52:47.401827"]]
+  ↳ db/seeds.rb:79
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mUserLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 125], ["lesson_id", 114], ["created_at", "2020-01-05 16:52:47.404747"], ["updated_at", "2020-01-05 16:52:47.404747"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ db/seeds.rb:82
+  [1m[36mUserLesson Create (0.2ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 126], ["lesson_id", 114], ["created_at", "2020-01-05 16:52:47.407234"], ["updated_at", "2020-01-05 16:52:47.407234"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Algorithms"], ["created_at", "2020-01-05 16:52:47.408680"], ["updated_at", "2020-01-05 16:52:47.408680"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Sorting"], ["created_at", "2020-01-05 16:52:47.410147"], ["updated_at", "2020-01-05 16:52:47.410147"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Search"], ["created_at", "2020-01-05 16:52:47.411323"], ["updated_at", "2020-01-05 16:52:47.411323"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:90
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Data Structures"], ["created_at", "2020-01-05 16:52:47.412923"], ["updated_at", "2020-01-05 16:52:47.412923"]]
+  ↳ db/seeds.rb:90
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Fundamentals"], ["created_at", "2020-01-05 16:52:47.414485"], ["updated_at", "2020-01-05 16:52:47.414485"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Arrays"], ["created_at", "2020-01-05 16:52:47.416226"], ["updated_at", "2020-01-05 16:52:47.416226"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Strings"], ["created_at", "2020-01-05 16:52:47.417895"], ["updated_at", "2020-01-05 16:52:47.417895"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Hash"], ["created_at", "2020-01-05 16:52:47.419195"], ["updated_at", "2020-01-05 16:52:47.419195"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Linked List"], ["created_at", "2020-01-05 16:52:47.420422"], ["updated_at", "2020-01-05 16:52:47.420422"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Stacks"], ["created_at", "2020-01-05 16:52:47.421718"], ["updated_at", "2020-01-05 16:52:47.421718"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:98
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Queues"], ["created_at", "2020-01-05 16:52:47.422985"], ["updated_at", "2020-01-05 16:52:47.422985"]]
+  ↳ db/seeds.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Trees"], ["created_at", "2020-01-05 16:52:47.424358"], ["updated_at", "2020-01-05 16:52:47.424358"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Graphs"], ["created_at", "2020-01-05 16:52:47.426098"], ["updated_at", "2020-01-05 16:52:47.426098"]]
+  ↳ db/seeds.rb:100
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Recursion"], ["created_at", "2020-01-05 16:52:47.427416"], ["updated_at", "2020-01-05 16:52:47.427416"]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Ruby"], ["created_at", "2020-01-05 16:52:47.428734"], ["updated_at", "2020-01-05 16:52:47.428734"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "Javascript"], ["created_at", "2020-01-05 16:52:47.430105"], ["updated_at", "2020-01-05 16:52:47.430105"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "SQL"], ["created_at", "2020-01-05 16:52:47.431584"], ["updated_at", "2020-01-05 16:52:47.431584"]]
+  ↳ db/seeds.rb:106
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "React"], ["created_at", "2020-01-05 16:52:47.433507"], ["updated_at", "2020-01-05 16:52:47.433507"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:110
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ db/seeds.rb:110
+  [1m[36mTagCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 43], ["tag_id", 52]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mTagCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 43], ["tag_id", 42]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:112
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:112
+  [1m[36mTagCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 43], ["tag_id", 43]]
+  ↳ db/seeds.rb:112
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:114
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ db/seeds.rb:114
+  [1m[36mTagCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 44], ["tag_id", 52]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mTagCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 44], ["tag_id", 42]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:116
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:116
+  [1m[36mTagCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 44], ["tag_id", 43]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:118
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ db/seeds.rb:118
+  [1m[36mTagCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 45], ["tag_id", 54]]
+  ↳ db/seeds.rb:118
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:119
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mTagCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 45], ["tag_id", 42]]
+  ↳ db/seeds.rb:119
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:120
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mTagCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "tag_courses" ("course_id", "tag_id") VALUES ($1, $2) RETURNING "id"[0m  [["course_id", 45], ["tag_id", 43]]
+  ↳ db/seeds.rb:120
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:120
+  [1m[36mUserCourse Load (0.8ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mUserCourse Create (2.8ms)[0m  [1m[32mINSERT INTO "user_courses" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 124], ["course_id", 43], ["created_at", "2020-01-05 16:53:13.176250"], ["updated_at", "2020-01-05 16:53:13.176250"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUserLesson Load (0.5ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" ORDER BY "user_lessons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUserCourse Load (0.5ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.6ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mUserCourse Update (0.5ms)[0m  [1m[33mUPDATE "user_courses" SET "completed" = $1, "updated_at" = $2 WHERE "user_courses"."id" = $3[0m  [["completed", true], ["updated_at", "2020-01-05 17:19:26.407903"], ["id", 104]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" ORDER BY "user_courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PATCH "/user_courses/104/complete" for ::1 at 2020-01-05 12:19:45 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"104"}
+  [1m[36mUserCourse Load (0.7ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_courses_controller.rb:27
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:27
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_courses_controller.rb:27
+Completed 500 Internal Server Error in 70ms (Views: 0.2ms | ActiveRecord: 19.0ms)
+
+
+
+AbstractController::DoubleRenderError - Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".:
+  app/controllers/user_courses_controller.rb:28:in `complete'
+
+Started PATCH "/user_courses/104/complete" for ::1 at 2020-01-05 12:20:31 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"104"}
+  [1m[36mUserCourse Load (0.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:21
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 5.9ms)
+
+
+Started PATCH "/user_courses/105/complete" for ::1 at 2020-01-05 12:20:37 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"105"}
+  [1m[36mUserCourse Load (1.3ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:21
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_courses_controller.rb:26
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:26
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:26
+  [1m[36mUserCourse Update (0.4ms)[0m  [1m[33mUPDATE "user_courses" SET "completed" = $1, "updated_at" = $2 WHERE "user_courses"."id" = $3[0m  [["completed", true], ["updated_at", "2020-01-05 17:20:37.640440"], ["id", 105]]
+  ↳ app/controllers/user_courses_controller.rb:26
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_courses_controller.rb:26
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 16.5ms)
+
+
+Started PATCH "/user_courses/105/complete" for ::1 at 2020-01-05 12:20:42 -0500
+Processing by UserCoursesController#complete as */*
+  Parameters: {"id"=>"105"}
+  [1m[36mUserCourse Load (0.4ms)[0m  [1m[34mSELECT  "user_courses".* FROM "user_courses" WHERE "user_courses"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/user_courses_controller.rb:21
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUserLesson Load (0.4ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" ORDER BY "user_lessons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/user_lessons/" for ::1 at 2020-01-05 12:21:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user_lessons"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user_lessons/36" for ::1 at 2020-01-05 12:21:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user_lessons/36"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user_lessons/36" for ::1 at 2020-01-05 12:21:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user_lessons/36"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user_lessons/36" for ::1 at 2020-01-05 12:22:09 -0500
+Processing by UserLessonsController#show as */*
+  Parameters: {"id"=>"36"}
+  [1m[36mUserLesson Load (0.5ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:12
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 6.4ms)
+
+
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/user_lessons/?user_lesson[user_id]=132&user_lesson[lesson_id]=121" for ::1 at 2020-01-05 12:23:04 -0500
+Processing by UserLessonsController#create as */*
+  Parameters: {"user_lesson"=>{"user_id"=>"132", "lesson_id"=>"121"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_lessons_controller.rb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:4
+  [1m[36mLesson Load (0.6ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:4
+  [1m[36mUserLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "user_lessons" ("user_id", "lesson_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 132], ["lesson_id", 121], ["created_at", "2020-01-05 17:23:04.105231"], ["updated_at", "2020-01-05 17:23:04.105231"]]
+  ↳ app/controllers/user_lessons_controller.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_lessons_controller.rb:4
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 12.6ms)
+
+
+Started PATCH "/user_lessons/43/complete" for ::1 at 2020-01-05 12:23:21 -0500
+Processing by UserLessonsController#complete as */*
+  Parameters: {"id"=>"43"}
+  [1m[36mUserLesson Load (0.5ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_lessons_controller.rb:26
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:26
+  [1m[36mLesson Load (0.5ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:26
+  [1m[36mUserLesson Update (0.4ms)[0m  [1m[33mUPDATE "user_lessons" SET "completed" = $1, "updated_at" = $2 WHERE "user_lessons"."id" = $3[0m  [["completed", true], ["updated_at", "2020-01-05 17:23:21.116354"], ["id", 43]]
+  ↳ app/controllers/user_lessons_controller.rb:26
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_lessons_controller.rb:26
+Completed 200 OK in 49ms (Views: 0.3ms | ActiveRecord: 42.2ms)
+
+
+Started PATCH "/user_lessons/43/complete" for ::1 at 2020-01-05 12:23:23 -0500
+Processing by UserLessonsController#complete as */*
+  Parameters: {"id"=>"43"}
+  [1m[36mUserLesson Load (1.2ms)[0m  [1m[34mSELECT  "user_lessons".* FROM "user_lessons" WHERE "user_lessons"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/user_lessons_controller.rb:21
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+

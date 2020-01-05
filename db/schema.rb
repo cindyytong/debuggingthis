@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_04_032555) do
+ActiveRecord::Schema.define(version: 2020_01_05_165030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2020_01_04_032555) do
     t.datetime "updated_at", null: false
     t.boolean "completed", default: false
     t.index ["course_id"], name: "index_user_courses_on_course_id"
-    t.index ["user_id", "course_id"], name: "index_user_courses_on_user_id_and_course_id"
+    t.index ["user_id", "course_id"], name: "index_user_courses_on_user_id_and_course_id", unique: true
     t.index ["user_id"], name: "index_user_courses_on_user_id"
   end
 
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2020_01_04_032555) do
     t.datetime "updated_at", null: false
     t.boolean "completed", default: false
     t.index ["lesson_id"], name: "index_user_lessons_on_lesson_id"
-    t.index ["user_id", "lesson_id"], name: "index_user_lessons_on_user_id_and_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_user_lessons_on_user_id_and_lesson_id", unique: true
     t.index ["user_id"], name: "index_user_lessons_on_user_id"
   end
 

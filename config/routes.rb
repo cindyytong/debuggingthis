@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # root to: "static_pages#root" 
   # resource :session, only: [:create, :destroy]
 
+  resource :session, only: [:new, :create, :destroy]
+
   post '/signup', to: 'users#create' 
   resources :users, only: [:show, :update] do 
     member do 

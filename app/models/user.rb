@@ -3,7 +3,7 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: { message: 'already registered'}, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'must be a valid email address'}
     validates :user_role, presence: true, inclusion: ["student", "coach"]
     validates :status, presence: true, inclusion: ["active", "inactive"]
-    validates :password, length: { minimum: 8, allow_nil: true, message: 'must be greater than 8 characters' } 
+    validates :password, length: { minimum: 6, allow_nil: true, message: 'Password must be greater than 6 characters' } 
 
     after_initialize :ensure_session_token
     after_create :create_profile
@@ -14,7 +14,8 @@ class User < ApplicationRecord
     class_name: :UserCourse,
     foreign_key: :user_id, 
     dependent: :destroy
-    
+
+   
     has_many :courses, 
     through: :course_enrollments,
     source: :course
@@ -28,8 +29,12 @@ class User < ApplicationRecord
     attr_reader :password 
 
     def self.find_by_credentials(email, password)
-        user = self.find_by(email: email)
+        user = User.find_by(email: email)
         (user && user.is_password?(password)) ? user : nil 
+    end 
+
+    def is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
     end 
 
     def password=(password)
@@ -37,17 +42,13 @@ class User < ApplicationRecord
         self.password_digest = BCrypt::Password.create(password)
     end 
 
-    def is_password?(password)
-        BCrypt::Password.new(self.password_digest).is_password?(password)
-    end 
-
     def generate_session_token
-        SecureRandom.urlsafe_base64 
+        SecureRandom.urlsafe_base64(16) 
     end 
 
     def reset_session_token!
         self.session_token = self.generate_session_token 
-        self.save 
+        self.save! 
         self.session_token
     end 
 

@@ -13955,3 +13955,165 @@ Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
 NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
   app/controllers/sessions_controller.rb:19:in `destroy'
 
+Started POST "/users?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t" for ::1 at 2020-01-05 22:10:30 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/signup?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t" for ::1 at 2020-01-05 22:11:31 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"tongcindyy@gmail.com", "first_name"=>"cindy", "last_name"=>"t"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/signup?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t" for ::1 at 2020-01-05 22:12:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"tongcindyy@gmail.com", "first_name"=>"cindy", "last_name"=>"t"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tongcindyy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 422 Unprocessable Entity in 28ms (Views: 0.3ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/signup?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t" for ::1 at 2020-01-05 22:13:18 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"tongcindyy@gmail.com", "first_name"=>"cindy", "last_name"=>"t"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tongcindyy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 422 Unprocessable Entity in 46926ms (Views: 0.2ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/signup?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t&user[password]=[FILTERED]" for ::1 at 2020-01-05 22:14:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"tongcindyy@gmail.com", "first_name"=>"cindy", "last_name"=>"t", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/signup?user[email]=tongcindyy@gmail.com&user[first_name]=cindy&user[last_name]=t&user[password]=[FILTERED]" for ::1 at 2020-01-05 22:14:24 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"tongcindyy@gmail.com", "first_name"=>"cindy", "last_name"=>"t", "password"=>"[FILTERED]"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tongcindyy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "tongcindyy@gmail.com"], ["first_name", "cindy"], ["last_name", "t"], ["password_digest", "$2a$12$xYBizOCZNVQl85dtwrKAnOZRqihxVRugwS24Vh6Uc/6Dm/lzdOR/e"], ["session_token", "I8vMZEzFiei84tTgG9kS7A"], ["created_at", "2020-01-06 03:14:27.436414"], ["updated_at", "2020-01-06 03:14:27.436414"]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 153], ["LIMIT", 1]]
+  ↳ app/models/user.rb:62
+  [1m[36mProfile Create (0.8ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 153], ["created_at", "2020-01-06 03:14:27.541715"], ["updated_at", "2020-01-06 03:14:27.541715"]]
+  ↳ app/models/user.rb:62
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (1.5ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+UserMailer#welcome_email: processed outbound mail in 195.8ms
+Sent mail to tongcindyy@gmail.com (34.3ms)
+Date: Sun, 05 Jan 2020 22:14:31 -0500
+From: heycindytong@gmail.com
+To: tongcindyy@gmail.com
+Message-ID: <5e12a61769ae0_60273fd81adce45c82387@cindys-mbp.lan.mail>
+Subject: Welcome to Debugging This
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e12a61767f8b_60273fd81adce45c82290";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e12a61767f8b_60273fd81adce45c82290
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to Debugging This, cindy
+===============================================
+
+You have successfully signed up to Debugging This,
+your username is: tongcindyy@gmail.com.
+
+Thanks for joining!
+
+----==_mimepart_5e12a61767f8b_60273fd81adce45c82290
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Debugging This, cindy</h1>
+    <p>
+      You have successfully signed up to Debugging This.
+      Your username is: tongcindyy@gmail.com.<br />
+    </p>
+    <p>
+    </p>
+    <p>Thanks for joining!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5e12a61767f8b_60273fd81adce45c82290--
+
+Completed 201 Created in 6825ms (Views: 1.2ms | ActiveRecord: 54.9ms)
+
+

@@ -3,6 +3,8 @@ class UsersController < ApplicationController
     def create 
         @user = User.new(user_params)
         if @user.save 
+            msg = UserMailer.welcome_email(@user)
+            msg.deliver_now 
             render json: @user, status: :created 
         else 
             render json: @user.errors.full_messages, status: :unprocessable_entity

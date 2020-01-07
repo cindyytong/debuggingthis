@@ -14124,3 +14124,141 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-01-07 13:25:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/cindytong/Desktop/debuggingthis/app/assets/config
+  /Users/cindytong/Desktop/debuggingthis/app/assets/images
+  /Users/cindytong/Desktop/debuggingthis/app/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/app/assets/stylesheets
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1418614395548099884_70197441272360'
+
+Started POST "/__better_errors/849ea18fb808dcd5/variables" for ::1 at 2020-01-07 13:25:36 -0500
+Started GET "/" for ::1 at 2020-01-07 13:28:02 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/cindytong/Desktop/debuggingthis/app/assets/config
+  /Users/cindytong/Desktop/debuggingthis/app/assets/images
+  /Users/cindytong/Desktop/debuggingthis/app/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/app/assets/stylesheets
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/node_modules:
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1418614395548099884_70197441796140'
+
+Started POST "/__better_errors/fdbf374f5f48c33b/variables" for ::1 at 2020-01-07 13:28:03 -0500
+Started GET "/" for ::1 at 2020-01-07 13:30:55 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/cindytong/Desktop/debuggingthis/app/assets/config
+  /Users/cindytong/Desktop/debuggingthis/app/assets/images
+  /Users/cindytong/Desktop/debuggingthis/app/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/app/assets/stylesheets
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/node_modules:
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1418614395548099884_70197442654380'
+
+Started POST "/__better_errors/d5d3a5e44039a724/variables" for ::1 at 2020-01-07 13:30:55 -0500
+Started GET "/" for ::1 at 2020-01-07 13:31:33 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9140.2ms)
+Completed 500 Internal Server Error in 12959ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/cindytong/Desktop/debuggingthis/app/assets/config
+  /Users/cindytong/Desktop/debuggingthis/app/assets/images
+  /Users/cindytong/Desktop/debuggingthis/app/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/app/assets/stylesheets
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/node_modules:
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1418614395548099884_70197425601840'
+
+Started POST "/__better_errors/f254da81da865ef5/variables" for ::1 at 2020-01-07 13:31:46 -0500
+Started GET "/" for ::1 at 2020-01-07 13:31:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 14883ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/cindytong/Desktop/debuggingthis/app/assets/config
+  /Users/cindytong/Desktop/debuggingthis/app/assets/images
+  /Users/cindytong/Desktop/debuggingthis/app/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/app/assets/stylesheets
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/cindytong/Desktop/debuggingthis/node_modules:
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1418614395548099884_70197426259560'
+
+Started POST "/__better_errors/9bdffbf76ebcc000/variables" for ::1 at 2020-01-07 13:32:09 -0500
+Started GET "/" for ::1 at 2020-01-07 13:34:36 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cindytong/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 691ms (Views: 689.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:35:06 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:35:17 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+

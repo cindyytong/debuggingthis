@@ -14,12 +14,11 @@ class User < ApplicationRecord
     class_name: :UserCourse,
     foreign_key: :user_id, 
     dependent: :destroy
-
    
     has_many :courses, 
     through: :course_enrollments,
     source: :course
-
+    
     has_many :user_lessons, dependent: :destroy
     
     has_many :lessons,

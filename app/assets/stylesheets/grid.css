@@ -1,0 +1,6 @@
+#root {
+    /* makes two column grid  */
+    grid-template-columns: 2fr 1fr; 
+    grid-gap: 1rem; 
+    background-color: black;
+}
